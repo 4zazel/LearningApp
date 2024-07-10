@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button TaskButton;
+    Button SettingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +28,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TaskButton = (Button) findViewById(R.id.Taskbtn);
+        SettingsButton = (Button) findViewById(R.id.settingsbtn);
 
         TaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, TaskActivity.class));
+            }
+        });
+
+        SettingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             }
         });
     }
